@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Palace Run</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <canvas id="game" width="960" height="540" aria-label="Palace Run game canvas"></canvas>
+      <button class="exit-button" data-action="quit" type="button">Esc</button>
+      <div class="touch" aria-hidden="true">
+        <button data-key="ArrowLeft">Left</button>
+        <button data-key="ArrowRight">Right</button>
+        <button data-key="ArrowUp">Up</button>
+        <button data-key="Space">Blade</button>
+        <button data-action="quit">Quit</button>
+      </div>
+    </main>
+    <script src="src/game.js"></script>
+  </body>
+</html>

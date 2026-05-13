@@ -1,0 +1,109 @@
+:root {
+  color-scheme: dark;
+  --ink: #f3e7c8;
+  --muted: #b7a179;
+  --shadow: #15120f;
+  --stone: #4d5a65;
+  --stone-dark: #26323d;
+  --gold: #d7a746;
+  --jade: #41b883;
+  --danger: #d35345;
+  --night: #0e1117;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 16%, rgba(215, 167, 70, 0.16), transparent 38%),
+    linear-gradient(180deg, #111923 0%, #0b0e12 62%, #08090b 100%);
+  color: var(--ink);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
+}
+
+.shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+canvas {
+  display: block;
+  width: min(100vw - 36px, 1280px);
+  height: auto;
+  max-height: calc(100vh - 36px);
+  image-rendering: pixelated;
+  background: #10151c;
+  border: 1px solid rgba(243, 231, 200, 0.22);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.5);
+}
+
+.exit-button {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 10;
+  min-width: 48px;
+  height: 36px;
+  border: 1px solid rgba(243, 231, 200, 0.72);
+  border-radius: 8px;
+  background: rgba(43, 19, 18, 0.96);
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+  backdrop-filter: blur(8px);
+}
+
+.exit-button:active {
+  background: rgba(211, 83, 69, 0.36);
+}
+
+.touch {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  display: none;
+  grid-template-columns: repeat(5, 58px);
+  gap: 8px;
+  transform: translateX(-50%);
+}
+
+.touch button {
+  min-width: 0;
+  height: 46px;
+  border: 1px solid rgba(243, 231, 200, 0.28);
+  border-radius: 8px;
+  background: rgba(20, 24, 30, 0.72);
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+  backdrop-filter: blur(8px);
+}
+
+.touch button:active {
+  background: rgba(215, 167, 70, 0.36);
+}
+
+@media (pointer: coarse), (max-width: 720px) {
+  .shell {
+    padding: 8px;
+    align-content: start;
+    padding-top: 12px;
+  }
+
+  canvas {
+    width: calc(100vw - 16px);
+    max-height: calc(100vh - 86px);
+  }
+
+  .touch {
+    display: grid;
+  }
+}
