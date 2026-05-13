@@ -1,0 +1,5 @@
+.DS_Store
+
+# Upstream reference repositories kept outside this parent repo's history.
+PrinceJS/
+Prince-of-Persia-Apple-II/
