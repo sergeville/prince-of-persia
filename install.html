@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Install Palace Run</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="docs-page">
+    <main class="install-shell">
+      <nav class="top-nav" aria-label="Project navigation">
+        <a href="index.html">Play</a>
+        <a aria-current="page" href="install.html">Install</a>
+      </nav>
+
+      <section class="install-hero">
+        <p class="eyebrow">Static browser game</p>
+        <h1>Install Palace Run</h1>
+        <p>
+          Clone the project, serve the folder locally, and play in any modern browser.
+          No package manager, build step, or external runtime is required.
+        </p>
+      </section>
+
+      <section class="install-steps" aria-label="Installation steps">
+        <article>
+          <span class="step-number">1</span>
+          <h2>Clone</h2>
+          <pre><code>git clone https://github.com/sergeville/prince-of-persia.git
+cd prince-of-persia</code></pre>
+        </article>
+
+        <article>
+          <span class="step-number">2</span>
+          <h2>Serve</h2>
+          <pre><code>python3 -m http.server 4173</code></pre>
+        </article>
+
+        <article>
+          <span class="step-number">3</span>
+          <h2>Play</h2>
+          <pre><code>http://127.0.0.1:4173/</code></pre>
+        </article>
+      </section>
+
+      <section class="install-notes">
+        <h2>Notes</h2>
+        <ul>
+          <li>Opening <code>index.html</code> directly also works for a quick local test.</li>
+          <li>The game is a separate prototype and does not ship original Prince of Persia assets.</li>
+          <li>Use <code>Enter</code> or <code>Space</code> to start, arrow keys to move, and <code>Esc</code> to quit a run.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

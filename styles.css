@@ -19,7 +19,6 @@ html,
 body {
   margin: 0;
   min-height: 100%;
-  overflow: hidden;
   background:
     radial-gradient(circle at 50% 16%, rgba(215, 167, 70, 0.16), transparent 38%),
     linear-gradient(180deg, #111923 0%, #0b0e12 62%, #08090b 100%);
@@ -27,11 +26,39 @@ body {
   font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
 }
 
+body:not(.docs-page) {
+  overflow: hidden;
+}
+
 .shell {
   min-height: 100vh;
   display: grid;
   place-items: center;
   padding: 18px;
+}
+
+.install-link {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 10;
+  min-width: 72px;
+  height: 36px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(243, 231, 200, 0.56);
+  border-radius: 8px;
+  background: rgba(14, 17, 23, 0.86);
+  color: var(--ink);
+  font-size: 13px;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+}
+
+.install-link:hover,
+.top-nav a:hover {
+  border-color: rgba(215, 167, 70, 0.92);
+  color: #fff3d4;
 }
 
 canvas {
@@ -91,6 +118,135 @@ canvas {
   background: rgba(215, 167, 70, 0.36);
 }
 
+.docs-page {
+  overflow: auto;
+}
+
+.install-shell {
+  width: min(960px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 28px 0 52px;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 56px;
+}
+
+.top-nav a {
+  min-width: 86px;
+  height: 38px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(243, 231, 200, 0.26);
+  border-radius: 8px;
+  background: rgba(14, 17, 23, 0.72);
+  color: var(--ink);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.top-nav a[aria-current="page"] {
+  border-color: rgba(215, 167, 70, 0.74);
+  color: #fff3d4;
+}
+
+.install-hero {
+  max-width: 760px;
+  margin-bottom: 34px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--gold);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.install-hero h1 {
+  margin: 0 0 16px;
+  color: #fff3d4;
+  font-size: clamp(40px, 7vw, 72px);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.install-hero p,
+.install-notes li {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.install-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 0 18px;
+}
+
+.install-steps article,
+.install-notes {
+  border: 1px solid rgba(243, 231, 200, 0.18);
+  border-radius: 8px;
+  background: rgba(14, 17, 23, 0.76);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.28);
+}
+
+.install-steps article {
+  min-width: 0;
+  padding: 18px;
+}
+
+.step-number {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(215, 167, 70, 0.64);
+  border-radius: 50%;
+  color: var(--gold);
+}
+
+.install-steps h2,
+.install-notes h2 {
+  margin: 16px 0 12px;
+  color: #fff3d4;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+pre {
+  margin: 0;
+  min-height: 96px;
+  overflow-x: auto;
+  padding: 14px;
+  border: 1px solid rgba(77, 90, 101, 0.72);
+  border-radius: 8px;
+  background: rgba(8, 9, 11, 0.78);
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+code {
+  font-family: inherit;
+}
+
+.install-notes {
+  padding: 18px 22px 22px;
+}
+
+.install-notes ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.install-notes li + li {
+  margin-top: 8px;
+}
+
 @media (pointer: coarse), (max-width: 720px) {
   .shell {
     padding: 8px;
@@ -105,5 +261,28 @@ canvas {
 
   .touch {
     display: grid;
+  }
+
+  .install-link {
+    top: 12px;
+    left: 12px;
+  }
+}
+
+@media (max-width: 820px) {
+  .install-shell {
+    padding-top: 18px;
+  }
+
+  .top-nav {
+    margin-bottom: 42px;
+  }
+
+  .install-steps {
+    grid-template-columns: 1fr;
+  }
+
+  pre {
+    min-height: auto;
   }
 }
