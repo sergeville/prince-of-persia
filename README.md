@@ -14,6 +14,40 @@ The window is configured for 1280 × 800 with sharp pixel scaling. Press **Optio
 
 This command uses the local runtime prepared on this Mac; a fresh clone needs setup first. See [classic setup and verification notes](docs/CLASSIC-SETUP.md).
 
+
+## Classic game keyboard controls
+
+On Mac, **Ctrl means Control**, not Command. Depending on your keyboard settings, use **Fn + F6/F9/F12** for the function keys.
+
+| Action | Keys |
+| --- | --- |
+| Run or turn | Left / Right arrows |
+| Jump or climb up | Up arrow |
+| Crouch or climb down | Down arrow |
+| Careful step near an edge | Shift + Left / Right |
+| Jump left or right | Up + Left / Right |
+| Catch a ledge while falling | Hold Shift |
+| Climb onto a ledge after catching it | Up arrow |
+| Pick up the sword or drink a potion | Shift, while close to it |
+| Attack with the sword | Shift |
+| Parry an enemy attack | Up arrow, while sword fighting |
+| Advance or retreat during combat | Left / Right arrows |
+| Put the sword away | Down arrow |
+| Pause / menu | Esc |
+| Show time remaining | Space |
+| Restart current level | Ctrl + A |
+| Return to title screen | Ctrl + R |
+| Toggle sound | Ctrl + S |
+| Toggle fullscreen | Option + Return |
+| Quicksave exact position | F6 |
+| Quickload | F9 |
+| Original level-based save (levels 3–13) | Ctrl + G |
+| Load original save from the intro | Ctrl + L |
+| Save a screenshot | F12 |
+| Quit | Ctrl + Q |
+
+The sword must first be collected before you can fight. Quicksave/quickload are SDLPoP additions. These mappings were checked against the [SDLPoP documentation](https://github.com/NagyD/SDLPoP/blob/v1.23/README.md) and combat source; interactive keyboard testing remains unverified in this tool session.
+
 ---
 
 # Palace Run — preserved prototype
