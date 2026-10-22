@@ -1,0 +1,5 @@
+#!/bin/zsh
+set -eu
+# Resolve the Desktop shortcut to the actual project folder.
+project_dir="${0:A:h:h:h:h}"
+exec /bin/zsh "$project_dir/Play Classic Prince of Persia.command" "$@"

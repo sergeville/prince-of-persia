@@ -3,3 +3,8 @@
 # Upstream reference repositories kept outside this parent repo's history.
 PrinceJS/
 Prince-of-Persia-Apple-II/
+
+# Local classic-game packages, build files, settings and saves.
+classic-runtime/
+# PDF inspection renders can be regenerated from the preserved PDF.
+evidence/reference/

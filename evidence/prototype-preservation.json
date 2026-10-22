@@ -1,0 +1,7 @@
+{
+  "index.html": true,
+  "styles.css": true,
+  "src/game.js": true,
+  "src/engine.js": true,
+  "src/render.js": true
+}

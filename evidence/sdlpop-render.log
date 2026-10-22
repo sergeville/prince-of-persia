@@ -1,0 +1,6 @@
+{
+  "code": 1,
+  "signal": null,
+  "stdout": "set_gr_mode: SDL_Init: The video driver did not add any displays\n",
+  "stderr": "2026-10-22 14:09:50.617 prince[18332:5121478] Failure on line 688 in function id scheduleApplicationNotification(LSNotificationCode, NSWorkspaceNotificationCenter *): noErr == _LSModifyNotification(notificationID, 1, &code, 0, NULL, NULL, NULL)\n"
+}

@@ -1,4 +1,22 @@
-# Palace Run
+> **Direction corrected, 2026-10-22:** Palace Run development is stopped and preserved. The current goal is faithful classic Prince of Persia. See [classic setup, launcher and actual verification limits](docs/CLASSIC-SETUP.md). The native candidate rendered offscreen; visible gameplay is not yet verified. The prototype instructions below are historical.
+
+# Play Classic Prince of Persia
+
+**Double-click `Prince of Persia` on your Desktop** to start the classic game. The shortcut points to `Prince of Persia.app` in this project and uses the same prepared runtime.
+
+You can also start it from Terminal:
+
+```sh
+"$HOME/Dev/prince-of-persia/Play Classic Prince of Persia.command"
+```
+
+The window is configured for 1280 × 800 with sharp pixel scaling. Press **Option + Return** to toggle fullscreen.
+
+This command uses the local runtime prepared on this Mac; a fresh clone needs setup first. See [classic setup and verification notes](docs/CLASSIC-SETUP.md).
+
+---
+
+# Palace Run — preserved prototype
 
 A small local browser platformer inspired by the Apple II `Prince of Persia` source archive in `Prince-of-Persia-Apple-II/`.
 

@@ -1,0 +1,4 @@
+project: prince-of-persia
+task_authority: Archon
+development_status:
+  palace-1: deferred # User stopped development; preserve unfinished work.

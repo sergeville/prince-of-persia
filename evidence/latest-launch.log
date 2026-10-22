@@ -1,0 +1,2 @@
+2026-10-22 14:17:27.209 prince[21303:5140253] Failure on line 688 in function id scheduleApplicationNotification(LSNotificationCode, NSWorkspaceNotificationCenter *): noErr == _LSModifyNotification(notificationID, 1, &code, 0, NULL, NULL, NULL)
+set_gr_mode: SDL_Init: The video driver did not add any displays
